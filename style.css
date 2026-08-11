@@ -1,0 +1,165 @@
+/* ===== RESET BÁSICO ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  color: #16c4a7;
+  line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+
+.cabecalho {
+  background-color: #be1363; /* 1. Nova cor de fundo */
+  color: #b10505;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cabecalho h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* ===== CONTEÚDO ===== */
+
+.conteudo {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cartao {
+  background-color: #ce069c;
+  border-radius: 20px 5px 20px 5px; /* 2. Borda arredondada diferente */
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(28, 117, 28, 0.1);
+}
+
+.cartao h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #021549c4;
+  padding-bottom: 6px;
+}
+
+.cartao ul {
+  list-style: inside disc;
+}
+
+/* 3. Efeito hover nos itens da lista */
+
+.cartao li {
+  padding: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cartao li:hover {
+  background-color: #5128e4;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== IMAGEM DE PERFIL ===== */
+
+.perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+  border: 4px solid #5128e4;
+}
+
+/* ===== BOTÃO ===== */
+
+.botao {
+  display: inline-block;
+  background-color: #27ae60;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #1e8449;
+}
+
+/* ===== RODAPÉ ===== */
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===== 4. RESPONSIVIDADE ===== */
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 30px 15px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.6rem;
+  }
+
+  .conteudo {
+    margin: 20px auto;
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .cartao {
+    padding: 15px;
+    border-radius: 15px 5px 15px 5px;
+  }
+
+  .perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .botao {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+E, na seção “Sobre mim” do HTML, você pode colocar a imagem assim:
+
+<section class="cartao">
+  <img
+    src="https://via.placeholder.com/150"
+    alt="Foto de perfil"
+    class="perfil"
+  >
+
+  <h2>Sobre mim</h2>
+  <p>
+    Olá! Meu nome é João e estou aprendendo desenvolvimento web.
+  </p>
+</section>
+
+O que foi alterado:
+
+Cabeçalho: fundo alterado para #2c3e50.
+Cartões: bordas com 20px 5px 20px 5px.
+Lista: efeito hover nos <li>.
+Responsividade: adicionada regra @media (max-width: 600px).
+Perfil: imagem circular com .perfil.
